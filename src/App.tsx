@@ -3,6 +3,7 @@ import Home from "./pages/Home";
 import Register from "./pages/Register";
 import Search from "./pages/Search";
 import React, { useEffect, useState } from "react";
+import Header from "./components/Header";
 
 const App = () => {
   const [user, setUser] = useState({
@@ -34,6 +35,7 @@ const App = () => {
 
   return (
     <>
+      <Header />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="*" element={<h1>ページがありません</h1>} />
