@@ -1,10 +1,15 @@
 type ButtonProps = {
   text: string;
   buttonColor: string;
+  handler?: () => void;
 };
 
-const Button = ({ text, buttonColor }: ButtonProps) => {
-  return <button style={{ background: buttonColor }}>{text}</button>;
+const Button = ({ handler, text, buttonColor }: ButtonProps) => {
+  return (
+    <button onClick={handler} style={{ background: buttonColor }}>
+      {text}
+    </button>
+  );
 };
 
 export default Button;

@@ -1,7 +1,12 @@
 import { Link } from "react-router-dom";
 import Button from "./Button";
 
-const Header = () => {
+type HeaderProps = {
+  loggedIn: boolean;
+  handleDelete: () => void;
+};
+
+const Header = ({ loggedIn, handleDelete }: HeaderProps) => {
   return (
     <header>
       <div>
@@ -18,11 +23,25 @@ const Header = () => {
             </Link>
           </li>
           <li>
-            <Link to="/search">
-              <Button text="検索" buttonColor="#49cc5c" />
-            </Link>
+            {loggedIn && (
+              <Link to="/search">
+                <Button text="検索" buttonColor="#49cc5c" />
+              </Link>
+            )}
           </li>
         </ul>
+      </div>
+      <div>
+        {loggedIn && (
+          <div>
+            <div className="pulse"></div>
+            <Button
+              text="ログアウト"
+              buttonColor="#fb6640"
+              handler={handleDelete}
+            />
+          </div>
+        )}
       </div>
     </header>
   );
