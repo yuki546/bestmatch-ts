@@ -40,7 +40,7 @@ const App = () => {
 
   return (
     <>
-      <Header loggedIn={loggedIn} handleDelete={handleDelete} />
+      <Header loggedIn={loggedIn} handleDelete={handleDelete} user={user} />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="*" element={<h1>ページがありません</h1>} />
