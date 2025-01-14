@@ -1,9 +1,10 @@
 type ButtonProps = {
-  text: string;
+  text: string | number;
   buttonColor: string;
   handler?: () => void;
   padding: [number, number, number, number];
   textColor?: "yellow" | "silver";
+  borderRadius?: number;
 };
 
 const Button = ({
@@ -12,6 +13,7 @@ const Button = ({
   buttonColor,
   padding,
   textColor,
+  borderRadius,
 }: ButtonProps) => {
   return (
     <button
@@ -20,6 +22,7 @@ const Button = ({
         background: buttonColor,
         padding: `${padding[0]}px ${padding[1]}px ${padding[2]}px ${padding[3]}px`,
         color: textColor,
+        borderRadius: borderRadius,
       }}
     >
       {text}
