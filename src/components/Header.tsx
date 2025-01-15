@@ -47,6 +47,17 @@ const Header = ({ user, loggedIn, handleDelete }: HeaderProps) => {
               </Link>
             )}
           </li>
+          <li>
+            {loggedIn && (
+              <Link to="/search-detailed">
+                <Button
+                  text="詳細"
+                  buttonColor="#cc49a9"
+                  padding={[3, 30, 3, 30]}
+                />
+              </Link>
+            )}
+          </li>
         </ul>
       </div>
       <div>

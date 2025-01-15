@@ -4,6 +4,7 @@ import Register from "./pages/Register";
 import Search from "./pages/Search";
 import React, { useEffect, useState } from "react";
 import Header from "./components/Header";
+import SearchDetailed from "./pages/SearchDetailed";
 
 const App = () => {
   const [user, setUser] = useState({
@@ -58,6 +59,9 @@ const App = () => {
             }
           />
           {loggedIn && <Route path="/search" element={<Search />} />}
+          {loggedIn && (
+            <Route path="/search-detailed" element={<SearchDetailed />} />
+          )}
         </Routes>
       </main>
     </>
