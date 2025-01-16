@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import Button from "./Button";
+import headerImg from "../assets/header-img.svg";
 
 type UserProps = {
   name: string;
@@ -17,6 +18,7 @@ const Header = ({ user, loggedIn, handleDelete }: HeaderProps) => {
     <header>
       <div>
         Header
+        <img src={headerImg} />
         <ul>
           <li>
             <Link to="/">

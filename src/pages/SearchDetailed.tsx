@@ -26,7 +26,6 @@ const Search = () => {
     fetch("https://randomuser.me/api/?results=12")
       .then((res) => res.json())
       .then((data) => {
-        const shuffledData = data.users.sort(() => Math.random() - 0.5);
         setCandidatesD(data.results);
         setLoading(false);
         setCount((prevCount) => prevCount + 1);

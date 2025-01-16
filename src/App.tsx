@@ -5,6 +5,7 @@ import Search from "./pages/Search";
 import React, { useEffect, useState } from "react";
 import Header from "./components/Header";
 import SearchDetailed from "./pages/SearchDetailed";
+import "./App.css";
 
 const App = () => {
   const [user, setUser] = useState({
